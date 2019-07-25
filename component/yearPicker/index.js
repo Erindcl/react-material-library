@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import { Icon } from "antd";
+import React, { Component } from "./node_modules/react";
+import { Icon } from "./node_modules/antd";
 import "./style.less";
-const moment = require('moment');
+import { isEqual } from './node_modules/lodash';
+const moment = require('./node_modules/moment');
 
 class YearPicker extends Component {
   constructor(props) {
@@ -12,12 +13,15 @@ class YearPicker extends Component {
       years: [],
     };
   }
-
-  componentWillMount() {
-    let { defaultValue } = this.props;
-    this.setState({ selectedyear: defaultValue ? defaultValue : moment().format('YYYY') });
-  }
   componentDidMount() {
+    let { defaultValue, value } = this.props;
+    if (value) {
+      this.setState({
+        selectedyear: value
+      })
+    } else {
+      this.setState({ selectedyear: defaultValue ? defaultValue : moment().format('YYYY') });
+    }
     let _this = this;
     document.addEventListener(
       "click",
@@ -34,6 +38,13 @@ class YearPicker extends Component {
       },
       false
     );
+  }
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.value && isEqual(this.props.value,nextProps.value)) {
+      this.setState({ 
+        selectedyear: nextProps.value
+      });
+    }
   }
   //初始化数据处理
   initData = (operand, defaultValue) => {
