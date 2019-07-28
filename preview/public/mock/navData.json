@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "message": "执行成功~~",
+  "data":{
+    "topNav":[
+      {
+        "id": 3,
+        "parentId": 1,
+        "permissionName": "大盘",
+        "permissionIcon": "",
+        "permissionUrl": "/index",
+        "children": []
+      }
+    ],
+    "sideNav":[
+      {
+        "id": 8,
+        "parentId": 0,
+        "permissionName": "大盘",
+        "permissionIcon": "",
+        "permissionUrl": "/index",
+        "children": []
+      }
+    ]
+  }
+}
