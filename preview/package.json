@@ -9,12 +9,11 @@
     "build": "ko build",
     "swagger": "ko swagger",
     "commit": "git cz",
-    "preview": "ko preview",
-    "newPage": "node ./src/scripts/newPage.js",
-    "newCom": "node ./src/scripts/newCom.js"
+    "preview": "ko preview"
   },
   "license": "MIT",
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "antd": "^3.19.5",
     "bizcharts": "^3.5.4",
     "classnames": "^2.2.6",
@@ -45,7 +44,7 @@
     "@types/react-resize-detector": "^4.0.1",
     "copy-webpack-plugin": "^5.0.3",
     "cz-conventional-changelog": "^2.1.0",
-    "ko-script": "^2.3.2",
+    "ko-script": "^3.8.0",
     "redux-devtools-extension": "^2.13.8"
   },
   "config": {

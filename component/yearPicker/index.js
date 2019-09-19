@@ -1,8 +1,8 @@
-import React, { Component } from "./node_modules/react";
-import { Icon } from "./node_modules/antd";
+import React, { Component } from "react";
+import { Icon } from "antd";
 import "./style.less";
-import { isEqual } from './node_modules/lodash';
-const moment = require('./node_modules/moment');
+import { isEqual } from 'lodash';
+const moment = require('moment');
 
 class YearPicker extends Component {
   constructor(props) {
