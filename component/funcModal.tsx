@@ -83,3 +83,19 @@ export default function funcModal(props) {
     div.className = parentCN;
     return render(<DeleteModal parentCN={parentCN} {...props} />, document.body.appendChild(div));
 }
+
+// 使用
+
+// import funcModal from './funcModal';
+// const openModal = () => {
+//     funcModal({
+//         title: '删除标签',
+//         content: '标签删除后不可恢复，请谨慎操作！',
+//         onOk: function () {
+//             console.log('ok');
+//         },
+//         onCancel: function () {
+//             console.log('cancle');
+//         }
+//     });
+// }
